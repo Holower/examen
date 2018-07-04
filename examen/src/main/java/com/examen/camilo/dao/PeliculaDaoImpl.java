@@ -4,7 +4,6 @@ import java.util.Iterator;
 import java.util.List;
 
 import com.examen.camilo.model.Pelicula;
-import com.examen.camilo.model.Usuario;
 import com.examen.camilo.model.Usuariopelicula;
 
 
@@ -36,6 +35,7 @@ public class PeliculaDaoImpl extends AbstractSession implements PeliculaDao {
 		getSession().update(pelicula);
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<Pelicula> findAllPeliculas() {
 		// TODO Auto-generated method stub
 		return getSession().createQuery("from Pelicula").list();

@@ -35,6 +35,7 @@ public class UsuarioDaoImpl extends AbstractSession implements UsuarioDao {
 		getSession().update(usuario);
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<Usuario> findAllUsuarios() {
 		// TODO Auto-generated method stub
 		return getSession().createQuery("from Usuario").list();

@@ -5,8 +5,7 @@ import java.util.List;
 
 import com.examen.camilo.model.Genero;
 import com.examen.camilo.model.Pelicula;
-import com.examen.camilo.model.Usuario;
-import com.examen.camilo.model.Usuariopelicula;
+
 
 
 
@@ -37,9 +36,10 @@ public class GeneroDaoImpl extends AbstractSession implements GeneroDao {
 		getSession().update(genero);
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<Genero> findAllGeneros() {
 		// TODO Auto-generated method stub
-		return getSession().createQuery("from Usuario").list();
+		return getSession().createQuery("from Genero").list();
 	}
 
 	public Genero findById(int idGenero) {
